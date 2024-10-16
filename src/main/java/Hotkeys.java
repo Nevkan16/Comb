@@ -6,7 +6,7 @@ import java.awt.event.InputEvent;
 public class Hotkeys {
 
     public static void registerCtrlMForMouseClick() {
-        JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_CONTROL, 'M');
+        JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_SHIFT, 0);
 
         JIntellitype.getInstance().addHotKeyListener(markCode -> {
             if (markCode == 1) {
