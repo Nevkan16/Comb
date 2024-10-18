@@ -9,11 +9,8 @@ public class Hotkeys {
         // Регистрация горячей клавиши Shift
         JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_SHIFT, 0);
 
-        // Регистрация горячей клавиши "A"
-        JIntellitype.getInstance().registerHotKey(2, 0, 'A');
-
         // Регистрация горячей клавиши "D"
-        JIntellitype.getInstance().registerHotKey(3, 0, 'D');
+        JIntellitype.getInstance().registerHotKey(2, 0, 'D');
 
         // Обработчик горячих клавиш
         JIntellitype.getInstance().addHotKeyListener(markCode -> {
@@ -25,10 +22,6 @@ public class Hotkeys {
                     robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
                     robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
                 } else if (markCode == 2) {
-                    // Эмулируем клик при нажатии "A"
-                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                    robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-                } else if (markCode == 3) {
                     // Эмулируем клик при нажатии "D"
                     robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
                     robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
