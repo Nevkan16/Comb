@@ -5,18 +5,36 @@ import java.awt.event.InputEvent;
 
 public class Hotkeys {
 
-    public static void registerCtrlMForMouseClick() {
+    public static void registerHotkeysForMouseClick() {
+        // Регистрация горячей клавиши Shift
         JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_SHIFT, 0);
 
+        // Регистрация горячей клавиши "A"
+        JIntellitype.getInstance().registerHotKey(2, 0, 'A');
+
+        // Регистрация горячей клавиши "D"
+        JIntellitype.getInstance().registerHotKey(3, 0, 'D');
+
+        // Обработчик горячих клавиш
         JIntellitype.getInstance().addHotKeyListener(markCode -> {
-            if (markCode == 1) {
-                try {
-                    Robot robot = new Robot();
+            try {
+                Robot robot = new Robot();
+
+                if (markCode == 1) {
+                    // Эмулируем клик при нажатии Shift
                     robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
                     robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-                } catch (AWTException e) {
-                    e.printStackTrace();
+                } else if (markCode == 2) {
+                    // Эмулируем клик при нажатии "A"
+                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                    robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                } else if (markCode == 3) {
+                    // Эмулируем клик при нажатии "D"
+                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                    robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
                 }
+            } catch (AWTException e) {
+                e.printStackTrace();
             }
         });
     }

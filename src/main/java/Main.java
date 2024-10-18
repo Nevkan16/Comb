@@ -3,6 +3,6 @@ public class Main {
         new Flops();
         new HowMuch();
         new BBdefend();
-        Hotkeys.registerCtrlMForMouseClick();
+        Hotkeys.registerHotkeysForMouseClick();
     }
 }
