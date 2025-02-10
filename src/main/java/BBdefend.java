@@ -76,6 +76,5 @@ public class BBdefend extends BaseWindow {
                 "Ranges/9.vs 4B 9%.PNG", 32, 0, 2, 2, panel);
         createButton("10", new Color(198, 224, 180),
                 "Ranges/10.vs 4B 10%.PNG", 33, 0, 2, 2, panel);
-
     }
 }
